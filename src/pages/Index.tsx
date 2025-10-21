@@ -8,6 +8,34 @@ import Icon from '@/components/ui/icon';
 
 export default function Index() {
   const [area, setArea] = useState([50]);
+  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/847ea1fc-9111-45bd-8e4e-73e22d9913ae', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', phone: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const [rooms, setRooms] = useState([2]);
   const [serviceType, setServiceType] = useState('painting');
   
@@ -419,20 +447,54 @@ export default function Index() {
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <Label htmlFor="name">Ваше имя</Label>
-                      <Input id="name" placeholder="Иван Иванов" className="mt-1" />
+                      <Input 
+                        id="name" 
+                        placeholder="Иван Иванов" 
+                        className="mt-1"
+                        value={formData.name}
+                        onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                        required
+                      />
                     </div>
                     <div>
                       <Label htmlFor="phone">Телефон</Label>
-                      <Input id="phone" placeholder="+7 (___) ___-__-__" className="mt-1" />
+                      <Input 
+                        id="phone" 
+                        placeholder="+7 (___) ___-__-__" 
+                        className="mt-1"
+                        value={formData.phone}
+                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                        required
+                      />
                     </div>
-                    <Button className="w-full bg-accent hover:bg-accent/90">
+                    <div>
+                      <Label htmlFor="message">Сообщение (необязательно)</Label>
+                      <Input 
+                        id="message" 
+                        placeholder="Опишите ваш проект" 
+                        className="mt-1"
+                        value={formData.message}
+                        onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                      />
+                    </div>
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-accent hover:bg-accent/90"
+                      disabled={isSubmitting}
+                    >
                       <Icon name="Send" size={18} className="mr-2" />
-                      Отправить заявку
+                      {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                     </Button>
-                  </div>
+                    {submitStatus === 'success' && (
+                      <p className="text-green-600 text-sm text-center">✅ Заявка успешно отправлена!</p>
+                    )}
+                    {submitStatus === 'error' && (
+                      <p className="text-red-600 text-sm text-center">❌ Ошибка отправки. Попробуйте позже.</p>
+                    )}
+                  </form>
                 </div>
               </CardContent>
             </Card>
