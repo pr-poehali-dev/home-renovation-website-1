@@ -105,7 +105,7 @@ export default function Index() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-5xl md:text-6xl font-heading font-bold mb-6 leading-tight">Профессиональный ремонт и покраска нежилых помещений</h2>
+            <h2 className="text-5xl md:text-6xl font-heading font-bold mb-6 leading-tight">Профессиональный ремонт нежилых помещений</h2>
             <p className="text-xl md:text-2xl mb-8 text-white/90">
               Преобразим ваш дом с гарантией качества и в срок
             </p>
