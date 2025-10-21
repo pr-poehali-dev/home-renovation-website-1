@@ -89,10 +89,34 @@ export default function Index() {
               <a href="#about" className="hover:text-accent transition-colors">О компании</a>
               <a href="#contact" className="hover:text-accent transition-colors">Контакты</a>
             </div>
-            <Button className="bg-accent hover:bg-accent/90">
-              <Icon name="Phone" size={16} className="mr-2" />
-              Позвонить
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button 
+                asChild
+                variant="outline" 
+                size="icon"
+                className="border-accent text-accent hover:bg-accent hover:text-white"
+              >
+                <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" size={18} />
+                </a>
+              </Button>
+              <Button 
+                asChild
+                variant="outline" 
+                size="icon"
+                className="border-accent text-accent hover:bg-accent hover:text-white"
+              >
+                <a href="https://wa.me/79001234567" target="_blank" rel="noopener noreferrer">
+                  <Icon name="MessageCircle" size={18} />
+                </a>
+              </Button>
+              <Button asChild className="bg-accent hover:bg-accent/90">
+                <a href="tel:+79001234567">
+                  <Icon name="Phone" size={16} className="mr-2" />
+                  Позвонить
+                </a>
+              </Button>
+            </div>
           </nav>
         </div>
       </header>
