@@ -304,7 +304,7 @@ export default function Index() {
                     <Icon name="Award" size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold mb-2">12 лет опыта</h3>
+                    <h3 className="text-xl font-heading font-bold mb-2">14 лет на рынке</h3>
                     <p className="text-white/90">Профессиональная команда с многолетним опытом работы</p>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ export default function Index() {
                     <Icon name="Users" size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold mb-2">500+ проектов</h3>
+                    <h3 className="text-xl font-heading font-bold mb-2">200+ проектов</h3>
                     <p className="text-white/90">Успешно завершённых ремонтов квартир и домов</p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Телефон</p>
-                        <p className="text-lg font-semibold text-primary">+7 (495) 123-45-67</p>
+                        <p className="text-lg font-semibold text-primary">+7-(926)-390-91-84</p>
                       </div>
                     </div>
 
@@ -364,7 +364,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Email</p>
-                        <p className="text-lg font-semibold text-primary">info@remontpro.ru</p>
+                        <p className="text-lg font-semibold text-primary">korvova@bk.ru</p>
                       </div>
                     </div>
 
