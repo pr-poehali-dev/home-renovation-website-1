@@ -361,7 +361,9 @@ export default function Index() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-4xl font-heading font-bold text-primary mb-4">Свяжитесь с нами</h2>
-              <p className="text-lg text-muted-foreground">Готовы обсудить ваш проект прямо сейчас (возможны задержки из-за количества звонков)</p>
+              <p className="text-lg text-muted-foreground">Готовы обсудить ваш проект прямо сейчас 
+
+(возможны задержки из-за количества звонков)</p>
             </div>
 
             <Card className="shadow-2xl animate-scale-in">
