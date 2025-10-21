@@ -322,7 +322,7 @@ export default function Index() {
                     <Icon name="Award" size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold mb-2">14 лет на рынке</h3>
+                    <h3 className="text-xl font-heading font-bold mb-2">18 лет на рынке</h3>
                     <p className="text-white/90">Профессиональная команда с многолетним опытом работы</p>
                   </div>
                 </div>
