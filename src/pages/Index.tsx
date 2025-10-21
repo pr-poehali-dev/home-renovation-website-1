@@ -300,14 +300,14 @@ export default function Index() {
                     <Slider
                       value={area}
                       onValueChange={setArea}
-                      min={20}
-                      max={200}
-                      step={5}
+                      min={50}
+                      max={750}
+                      step={10}
                       className="mb-2"
                     />
                     <div className="flex justify-between text-sm text-muted-foreground">
-                      <span>20 м²</span>
-                      <span>200 м²</span>
+                      <span>50 м²</span>
+                      <span>750 м²</span>
                     </div>
                   </div>
 
