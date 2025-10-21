@@ -81,9 +81,7 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <h1 className="text-2xl font-heading font-bold text-primary">
-              РемонтПро
-            </h1>
+            <h1 className="text-2xl font-heading font-bold text-primary">ООО Евро Электро</h1>
             <div className="hidden md:flex items-center gap-8">
               <a href="#services" className="hover:text-accent transition-colors">Услуги</a>
               <a href="#portfolio" className="hover:text-accent transition-colors">Портфолио</a>
@@ -427,7 +425,7 @@ export default function Index() {
       <footer className="bg-primary text-white py-8">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <p className="text-white/80">&copy; 2024 РемонтПро. Все права защищены.</p>
+            <p className="text-white/80">© 2025 ООО Евро Электро. Все права защищены.</p>
           </div>
         </div>
       </footer>
