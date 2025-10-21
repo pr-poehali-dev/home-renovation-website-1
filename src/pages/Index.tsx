@@ -392,7 +392,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Адрес</p>
-                        <p className="text-lg font-semibold text-primary">г. Москва, ул. Примерная, д. 1</p>
+                        <p className="text-lg font-semibold text-primary">109316, г. Москва, ул. Талалихина, д. 41, стр. 9, эт/пом/к/о 3/VIII/22/34Г</p>
                       </div>
                     </div>
                   </div>
