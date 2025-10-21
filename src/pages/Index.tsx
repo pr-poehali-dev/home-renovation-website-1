@@ -395,7 +395,7 @@ export default function Index() {
                   </div>
                   <div>
                     <h3 className="text-xl font-heading font-bold mb-2">Гарантия 3 года</h3>
-                    <p className="text-white/90">На все виды работ с договором и официальными документами</p>
+                    <p className="text-white/90">Все работы юридически защищены</p>
                   </div>
                 </div>
               </div>
