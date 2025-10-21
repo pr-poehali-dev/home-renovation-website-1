@@ -394,7 +394,7 @@ export default function Index() {
                     <Icon name="Shield" size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold mb-2">Гарантия 3 года</h3>
+                    <h3 className="text-xl font-heading font-bold mb-2">Все чисто</h3>
                     <p className="text-white/90">Все работы юридически защищены</p>
                   </div>
                 </div>
